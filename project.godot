@@ -8,10 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "GameEvents",
+"language": "GDScript",
+"path": "res://Scripts/Enums/GameEvents.gd"
+} ]
+_global_script_class_icons={
+"GameEvents": ""
+}
+
 [application]
 
 config/name="Pie De Way"
+run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://Assets/icon.png"
+
+[autoload]
+
+EventManager="*res://Scripts/Managers/EventManager.gd"
 
 [physics]
 
