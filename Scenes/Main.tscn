@@ -1,12 +1,60 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/NPC/NPC_cat.gd" type="Script" id=4]
+[ext_resource path="res://Assets/CatGodot.png" type="Texture" id=5]
+[ext_resource path="res://Assets/woooow.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/NPC/NPC_pika.gd" type="Script" id=7]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -3
+color = Color( 1, 0.827451, 0.627451, 1 )
+polygon = PoolVector2Array( 1021.46, -1.93288, 1024.99, 600.286, -0.311554, 601.465, -0.311646, 0.424133 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 365.562, 211.653 )
+position = Vector2( 601.138, 360.217 )
 script = ExtResource( 3 )
+
+[node name="NPC_cat" parent="." instance=ExtResource( 2 )]
+position = Vector2( 677.377, 359.956 )
+script = ExtResource( 4 )
+
+[node name="Head" parent="NPC_cat" index="0"]
+position = Vector2( 0.623779, -90.6414 )
+scale = Vector2( 0.310896, 0.310896 )
+texture = ExtResource( 5 )
+
+[node name="Body" parent="NPC_cat" index="1"]
+color = Color( 0.670588, 0.898039, 0.52549, 1 )
+
+[node name="LeftHand" parent="NPC_cat" index="2"]
+vertex_colors = PoolColorArray( 1, 1, 1, 1, 0.901961, 0.909804, 0.254902, 1, 1, 1, 1, 1 )
+
+[node name="RightHand" parent="NPC_cat" index="3"]
+vertex_colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 0.886275, 0.945098, 0.247059, 1 )
+
+[node name="NPC_pika" parent="." instance=ExtResource( 2 )]
+position = Vector2( 529.62, 359.484 )
+script = ExtResource( 7 )
+
+[node name="Head" parent="NPC_pika" index="0"]
+position = Vector2( -0.406738, -88.6545 )
+scale = Vector2( 0.10249, 0.10249 )
+texture = ExtResource( 6 )
+
+[node name="Body" parent="NPC_pika" index="1"]
+color = Color( 0.964706, 0.905882, 0.0470588, 1 )
+
+[node name="LeftHand" parent="NPC_pika" index="2"]
+vertex_colors = PoolColorArray( 0.945098, 0.611765, 0.0313726, 1, 0.952941, 0.988235, 0.0588235, 1, 0.980392, 0.654902, 0.0823529, 1 )
+
+[node name="RightHand" parent="NPC_pika" index="3"]
+vertex_colors = PoolColorArray( 1, 0.6, 0.121569, 1, 0.996078, 0.623529, 0.0862745, 1, 1, 0.988235, 0, 1 )
+
+[editable path="NPC_cat"]
+[editable path="NPC_pika"]
