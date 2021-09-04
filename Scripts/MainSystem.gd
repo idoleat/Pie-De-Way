@@ -5,6 +5,7 @@ func _ready():
 	print("Hellow World!")
 	
 	EventManager.listen(GameEvents.mouse_pressed, funcref(self, "on_PogChamp"))
+	TimeManager.start_countdown("test", 3, funcref(self, "on_PogChamp"))
 
 	pass
 
