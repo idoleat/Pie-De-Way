@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.6509, 21.2191 )
 
-[node name="Kinematic2D" type="KinematicBody2D"]
+[node name="Character" type="KinematicBody2D"]
 
 [node name="Head" type="Sprite" parent="."]
 position = Vector2( 0, -85 )
@@ -32,5 +32,6 @@ polygon = PoolVector2Array( -55.1292, 10.4599, -53.4625, 47.5432, -22.2125, 58.3
 vertex_colors = PoolColorArray( 0.878431, 0.588235, 0.588235, 1, 0.878431, 0.588235, 0.588235, 1, 0.945098, 0.247059, 0.247059, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.833313, -12.0637 )
 shape = SubResource( 1 )
