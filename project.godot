@@ -43,6 +43,10 @@ UiManager="*res://Scripts/Managers/UIManager.gd"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[display]
+
+window/dpi/allow_hidpi=true
+
 [physics]
 
 common/enable_pause_aware_picking=true
