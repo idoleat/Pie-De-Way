@@ -36,6 +36,12 @@ EventManager="*res://Scripts/Managers/EventManager.gd"
 ItemManager="*res://Scripts/Managers/ItemManager.gd"
 DataManager="*res://Scripts/Managers/DataManager.gd"
 TimeManager="*res://Scripts/Managers/TimeManager.gd"
+UiManager="*res://Scripts/Managers/UIManager.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 
