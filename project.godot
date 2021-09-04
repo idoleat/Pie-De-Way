@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GameEvents",
 "language": "GDScript",
 "path": "res://Scripts/Enums/GameEvents.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Scripts/Item.gd"
 } ]
 _global_script_class_icons={
-"GameEvents": ""
+"GameEvents": "",
+"Item": ""
 }
 
 [application]
@@ -27,6 +33,8 @@ config/icon="res://Assets/icon.png"
 [autoload]
 
 EventManager="*res://Scripts/Managers/EventManager.gd"
+ItemManager="*res://Scripts/Managers/ItemManager.gd"
+DataManager="*res://Scripts/Managers/DataManager.gd"
 
 [physics]
 
