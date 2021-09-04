@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=10 format=2]
-=======
-[gd_scene load_steps=12 format=2]
->>>>>>> master
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
@@ -11,15 +7,12 @@
 [ext_resource path="res://Assets/CatGodot.png" type="Texture" id=5]
 [ext_resource path="res://Assets/woooow.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/NPC/NPC_pika.gd" type="Script" id=7]
-<<<<<<< HEAD
-[ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=9]
-=======
 [ext_resource path="res://Scenes/UberEats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/FoodPanda.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/NPC/NPC_UberEats.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/NPC/NPC_FoodPanda.gd" type="Script" id=11]
->>>>>>> master
+[ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=13]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -69,17 +62,16 @@ vertex_colors = PoolColorArray( 0.945098, 0.611765, 0.0313726, 1, 0.952941, 0.98
 [node name="RightHand" parent="NPC_pika" index="3"]
 vertex_colors = PoolColorArray( 1, 0.6, 0.121569, 1, 0.996078, 0.623529, 0.0862745, 1, 1, 0.988235, 0, 1 )
 
-<<<<<<< HEAD
 [node name="GUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 9 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Inventory" parent="GUI" instance=ExtResource( 8 )]
-=======
+[node name="Inventory" parent="GUI" instance=ExtResource( 12 )]
+
 [node name="FoosPanda" parent="." instance=ExtResource( 9 )]
 position = Vector2( 56.722, -18.4644 )
 script = ExtResource( 11 )
@@ -93,7 +85,6 @@ position = Vector2( 65.1309, -19.8659 )
 
 [node name="B" type="Node2D" parent="."]
 position = Vector2( 958.658, -20.2875 )
->>>>>>> master
 
 [editable path="NPC_cat"]
 [editable path="NPC_pika"]
