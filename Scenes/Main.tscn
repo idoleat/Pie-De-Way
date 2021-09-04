@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
@@ -9,8 +9,7 @@
 [ext_resource path="res://Scripts/NPC/NPC_pika.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/UberEats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/FoodPanda.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scripts/NPC/NPC_UberEats.gd" type="Script" id=10]
-[ext_resource path="res://Scripts/NPC/NPC_FoodPanda.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/NPC/NPC_UEnFP.gd" type="Script" id=10]
 [ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=13]
 
@@ -24,6 +23,7 @@ polygon = PoolVector2Array( 1021.46, -1.93288, 1024.99, 600.286, -0.311554, 601.
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 601.138, 360.217 )
+collision_layer = 3
 script = ExtResource( 3 )
 
 [node name="NPC_cat" parent="." instance=ExtResource( 2 )]
@@ -74,10 +74,13 @@ __meta__ = {
 
 [node name="FoosPanda" parent="." instance=ExtResource( 9 )]
 position = Vector2( 56.722, -18.4644 )
-script = ExtResource( 11 )
+collision_layer = 2
+script = ExtResource( 10 )
+onA = true
 
 [node name="UberEats" parent="." instance=ExtResource( 8 )]
 position = Vector2( 980.949, -23.8928 )
+collision_layer = 2
 script = ExtResource( 10 )
 
 [node name="A" type="Node2D" parent="."]
