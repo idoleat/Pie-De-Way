@@ -37,6 +37,10 @@ ItemManager="*res://Scripts/Managers/ItemManager.gd"
 DataManager="*res://Scripts/Managers/DataManager.gd"
 TimeManager="*res://Scripts/Managers/TimeManager.gd"
 
+[display]
+
+window/dpi/allow_hidpi=true
+
 [physics]
 
 common/enable_pause_aware_picking=true
