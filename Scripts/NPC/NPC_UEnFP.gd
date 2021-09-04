@@ -10,7 +10,6 @@ var last_collider_id
 
 
 func _ready():
-	EventManager.listen(GameEvents.mouse_pressed, funcref(self, "get_input"))
 	A_position = get_node("../A").position
 	B_position = get_node("../B").position
 	if (onA): position = A_position
