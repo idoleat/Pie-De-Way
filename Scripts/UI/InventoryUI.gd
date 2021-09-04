@@ -5,6 +5,8 @@ var panel_count = 7
 var panel_list = []
 var item_id_dict = {}
 
+onready var itemlist = get_node("ItemList")
+
 func _ready():
 	get_all_panel_references()
 
@@ -27,3 +29,6 @@ func show_item(item_name : String):
 				panel_list[i].get_stylebox("panel").set_texture(data.icon)
 				item_id_dict[item_name] = i
 				break
+
+func switch_visible(is_visible : bool):
+	itemlist.visible = is_visible

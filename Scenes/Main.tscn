@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/UberEats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/FoodPanda.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/NPC/NPC_UEnFP.gd" type="Script" id=10]
+[ext_resource path="res://UIs/Ending.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=13]
 
@@ -69,6 +70,8 @@ script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Ending" parent="GUI" instance=ExtResource( 11 )]
 
 [node name="Inventory" parent="GUI" instance=ExtResource( 12 )]
 

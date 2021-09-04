@@ -21,7 +21,7 @@ func start_countdown(event : String, second : float, callback):
 	timer.start()
 
 func on_timer_timeout(event : String):
-	callbacks[event].call_func(123)
+	callbacks[event].call_func(null)
 	
 	callbacks.erase(event)
 	timers.erase(event)
