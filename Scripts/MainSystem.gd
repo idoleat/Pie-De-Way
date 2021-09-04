@@ -8,15 +8,10 @@ func _ready():
 
 	pass
 
-func _process(delta):
-	#print("Hellow World!")
-	pass
-
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
-		EventManager.send(GameEvents.mouse_pressed)
+		EventManager.send(GameEvents.mouse_pressed, event.position)
 		print("mouse button event at ", event.position)
-		
 
-func on_PogChamp(args) -> void:
+func on_PogChamp(_args) -> void:
 	print("PogChamp")
