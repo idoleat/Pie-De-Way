@@ -1,17 +1,16 @@
 extends Node
 
-var ItemUI = preload("res://UIs/GUI.tscn")
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+onready var inventory = get_node("Inventory")
+var test = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	EventManager.listen(GameEvents.update_item_amount, funcref(self, "update_inventory"))
+	
 	pass # Replace with function body.
 
+func update_inventory(args):
+	var item_name = args.item_name
+	var amount = args.amount
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	inventory.show_item(item_name)

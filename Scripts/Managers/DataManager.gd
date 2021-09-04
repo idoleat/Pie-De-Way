@@ -17,11 +17,13 @@ func load_all_items():
 	var file_name = dir.get_next()
 	while file_name != "":
 		if !dir.current_is_dir():
-			var item : Item
-			item = load(path + file_name)
+			var item = load(path + file_name)
 			all_items[item.name] = item
 				
 		file_name = dir.get_next()
 
 func get_item_data(item_name : String):
-	return all_items[item_name]
+	if not all_items.has(item_name):
+		print("Can't find Item resource:" + item_name)
+	else:
+		return all_items[item_name]

@@ -9,13 +9,16 @@ func _ready():
 	EventManager.listen(GameEvents.get_item, funcref(self, "get_item"))
 	EventManager.listen(GameEvents.get_money, funcref(self, "get_money"))
 
-func get_item(item_name : String):
-	if items.has(item_name):
-		items[item_name] += 1
-	else:
-		items[item_name] = 1
+func get_item(args):
+	var item_name = args.item_name
+	var amount = args.amount
 	
-	EventManager.send(GameEvents.update_item_amount, {name = item_name, amount = items[item_name]})
+	if items.has(item_name):
+		items[item_name] += amount
+	else:
+		items[item_name] = amount
+	
+	EventManager.send(GameEvents.update_item_amount, {item_name = item_name, amount = items[item_name]})
 	print("Get item:" + item_name + ", current amount:" + str(items[item_name]))
 
 func get_money(amount : int):

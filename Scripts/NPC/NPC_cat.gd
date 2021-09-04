@@ -6,4 +6,4 @@ func _ready():
 
 func Collided():
 	print("Meow~~~~~")
-	EventManager.send(GameEvents.get_item, "X7RE4P")
+	EventManager.send(GameEvents.get_item, {item_name = "X7RE4P", amount = 1})

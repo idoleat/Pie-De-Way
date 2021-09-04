@@ -6,5 +6,4 @@ func _ready():
 
 func Collided():
 	print("Pika! Pika!")
-	for i in range(0,3):
-		EventManager.send(GameEvents.get_item, "bolt")
+	EventManager.send(GameEvents.get_item, {item_name = "Bolt", amount = 3})
