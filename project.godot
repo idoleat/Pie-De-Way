@@ -33,8 +33,6 @@ config/icon="res://Assets/icon.png"
 [autoload]
 
 EventManager="*res://Scripts/Managers/EventManager.gd"
-ItemManager="*res://Scripts/Managers/ItemManager.gd"
-DataManager="*res://Scripts/Managers/DataManager.gd"
 
 [physics]
 
