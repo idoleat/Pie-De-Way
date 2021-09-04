@@ -10,9 +10,10 @@
 [ext_resource path="res://Scenes/UberEats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/FoodPanda.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/NPC/NPC_UEnFP.gd" type="Script" id=10]
-[ext_resource path="res://UIs/Ending.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Anchor.gd" type="Script" id=11]
 [ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=13]
+[ext_resource path="res://UIs/Ending.tscn" type="PackedScene" id=14]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -26,6 +27,15 @@ polygon = PoolVector2Array( 1021.46, -1.93288, 1024.99, 600.286, -0.311554, 601.
 position = Vector2( 601.138, 360.217 )
 collision_layer = 3
 script = ExtResource( 3 )
+
+[node name="Anchor" type="Position2D" parent="."]
+position = Vector2( 599.62, 301.737 )
+script = ExtResource( 11 )
+
+[node name="Camera2D" type="Camera2D" parent="Anchor"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [node name="NPC_cat" parent="." instance=ExtResource( 2 )]
 position = Vector2( 677.377, 359.956 )
@@ -71,7 +81,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ending" parent="GUI" instance=ExtResource( 11 )]
+[node name="Ending" parent="GUI" instance=ExtResource( 14 )]
 
 [node name="Inventory" parent="GUI" instance=ExtResource( 12 )]
 
