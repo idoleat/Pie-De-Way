@@ -1,7 +1,7 @@
 extends Panel
 
-onready var title = get_node("Title")
-onready var comment = get_node("Comment")
+onready var title = $Title
+onready var comment = $Comment
 
 func switch_visible(is_visible : bool):
 	visible = is_visible

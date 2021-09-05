@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://UIs/Inventory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/Managers/UIManager.gd" type="Script" id=13]
 [ext_resource path="res://UIs/Ending.tscn" type="PackedScene" id=14]
+[ext_resource path="res://UIs/Hint.tscn" type="PackedScene" id=15]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -80,6 +81,8 @@ script = ExtResource( 13 )
 [node name="Ending" parent="GUI" instance=ExtResource( 14 )]
 
 [node name="Inventory" parent="GUI" instance=ExtResource( 12 )]
+
+[node name="Hint" parent="GUI" instance=ExtResource( 15 )]
 
 [node name="FoosPanda" parent="." instance=ExtResource( 9 )]
 position = Vector2( 56.722, -18.4644 )

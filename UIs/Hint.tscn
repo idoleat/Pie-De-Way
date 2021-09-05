@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/UI/HintUI.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Items/Item_dummy.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/SNsanafonGyou.TTF" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Hint" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Holder" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = -40.0
+margin_right = 175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemIcon" type="Panel" parent="Holder"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemAmount" type="Label" parent="Holder"]
+margin_left = 44.0
+margin_top = 1.0
+margin_right = 116.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " x 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
