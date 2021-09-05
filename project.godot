@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Item",
 "language": "GDScript",
 "path": "res://Scripts/Res/Item.gd"
+}, {
+"base": "Resource",
+"class": "NPChead",
+"language": "GDScript",
+"path": "res://Scripts/NPC/NPChead.gd"
 } ]
 _global_script_class_icons={
 "GameEvents": "",
 "InventoryUI": "",
-"Item": ""
+"Item": "",
+"NPChead": ""
 }
 
 [application]
