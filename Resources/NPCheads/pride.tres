@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/NPC/NPChead.gd" type="Script" id=1]
+[ext_resource path="res://Assets/NPCs/Pridots.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+head = ExtResource( 2 )
+name = ""
+offset = Vector2( -1.869, -92.289 )
+scale = Vector2( 0.187, 0.187 )

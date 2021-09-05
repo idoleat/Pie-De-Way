@@ -24,7 +24,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LineEdit" type="LineEdit" parent="UI"]
+margin_left = 307.994
+margin_top = 104.497
+margin_right = 390.994
+margin_bottom = 184.497
+placeholder_text = "amount"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="GenPoint" type="Node2D" parent="."]
 position = Vector2( 221.385, 370.305 )
 
 [connection signal="button_down" from="UI/Button" to="." method="_on_Button_button_down"]
+[connection signal="text_changed" from="UI/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_entered" from="UI/LineEdit" to="." method="_on_LineEdit_text_entered"]

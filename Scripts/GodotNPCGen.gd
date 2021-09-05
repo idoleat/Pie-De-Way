@@ -5,6 +5,7 @@ export (float) var spacing = 100
 var heads = []
 var character
 var gen_point
+var Amount
 
 func _ready():
 	for file in list_files_in_directory("res://Resources/NPCheads/"):
@@ -31,7 +32,7 @@ func list_files_in_directory(path):
 
 func _on_Button_button_down():
 	print(heads)
-	generate(1)
+	generate(Amount)
 	
 func generate(amount: int):
 	for i in range(0, amount):
@@ -45,3 +46,6 @@ func generate(amount: int):
 		ch.position = Vector2(gen_point.x + i * spacing, gen_point.y)
 		# print(ch, ": name - ", ch.name, ", ")
 		add_child(ch)
+
+func _on_LineEdit_text_changed(new_text):
+	Amount = new_text.to_int()
