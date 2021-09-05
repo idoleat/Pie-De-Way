@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/icon.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/GodotNPCGen.gd" type="Script" id=2]
+
+[node name="Generator" type="Node"]
+script = ExtResource( 2 )
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="UI"]
+margin_left = 79.0339
+margin_top = 102.629
+margin_right = 271.034
+margin_bottom = 189.629
+text = "Generate"
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GenPoint" type="Node2D" parent="."]
+position = Vector2( 221.385, 370.305 )
+
+[connection signal="button_down" from="UI/Button" to="." method="_on_Button_button_down"]
