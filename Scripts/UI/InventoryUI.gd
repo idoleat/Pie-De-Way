@@ -29,6 +29,3 @@ func show_item(item_name : String):
 				panel_list[i].get_stylebox("panel").set_texture(data.icon)
 				item_id_dict[item_name] = i
 				break
-
-func switch_visible(is_visible : bool):
-	itemlist.visible = is_visible
