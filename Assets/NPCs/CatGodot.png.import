@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UbEt.png-dfa3c01785f98ac756d1a11587196a7a.stex"
+path="res://.import/CatGodot.png-5a3a70f039d48d24d89ca350f22c64b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UbEt.png"
-dest_files=[ "res://.import/UbEt.png-dfa3c01785f98ac756d1a11587196a7a.stex" ]
+source_file="res://Assets/NPCs/CatGodot.png"
+dest_files=[ "res://.import/CatGodot.png-5a3a70f039d48d24d89ca350f22c64b9.stex" ]
 
 [params]
 

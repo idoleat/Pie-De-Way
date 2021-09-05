@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/panda.png" type="Texture" id=1]
+[ext_resource path="res://Assets/NPCs/panda.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
 
 [node name="FoodPanda" instance=ExtResource( 2 )]

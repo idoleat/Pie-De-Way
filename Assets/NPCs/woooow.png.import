@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panda.png-cb47a10a3dd531bd27a3220870bd8af7.stex"
+path="res://.import/woooow.png-f1bd40f627c1414aa62b067a415b7114.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/panda.png"
-dest_files=[ "res://.import/panda.png-cb47a10a3dd531bd27a3220870bd8af7.stex" ]
+source_file="res://Assets/NPCs/woooow.png"
+dest_files=[ "res://.import/woooow.png-f1bd40f627c1414aa62b067a415b7114.stex" ]
 
 [params]
 
