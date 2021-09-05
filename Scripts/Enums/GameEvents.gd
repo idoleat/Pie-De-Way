@@ -13,7 +13,10 @@ enum {
 	update_item_amount,
 	update_money_amount
 	
+	#BaoBro
+	curry_video_finished,
+	
 	#ending related
-	game_ended
+	game_ended,
 	show_ending
 }

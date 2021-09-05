@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/NPCs/Vulkan Godot.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -85 ), Vector2( 1.4015, -83.2481 ), Vector2( -1.05112, -85.3504 ), Vector2( 1.75186, -86.7519 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Body:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -102.336 ), Vector2( -1.75186, -101.635 ), Vector2( 1.05112, -101.285 ), Vector2( 0.350388, -103.387 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3.333, -73.75 ), Vector2( -3.333, -75.75 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.7, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 70.0232, -77.1023 ), Vector2( 70.0232, -79.1023 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 31.6509, 21.2191 )
+
+[node name="BaoBro" type="KinematicBody2D"]
+
+[node name="Head" type="Sprite" parent="."]
+position = Vector2( -0.17969, -90.0315 )
+scale = Vector2( 0.18, 0.18 )
+texture = ExtResource( 1 )
+offset = Vector2( -64, -80 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head"]
+autoplay = "idle"
+anims/idle = SubResource( 1 )
+
+[node name="Body" type="Polygon2D" parent="."]
+position = Vector2( -0.745326, -101.509 )
+scale = Vector2( 0.956522, 1 )
+z_index = -1
+color = Color( 0.168627, 0.27451, 0.219608, 1 )
+polygon = PoolVector2Array( -31.1133, 108.981, -1.05654, 88.9811, 32.4851, 111.064, 13.3185, 36.0644, -12.3823, 39.8144 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Body"]
+autoplay = "idle"
+anims/idle = SubResource( 2 )
+
+[node name="LeftHand" type="Polygon2D" parent="."]
+position = Vector2( -6.0057, -74.2495 )
+z_index = -2
+color = Color( 0.611765, 0.756863, 0.658824, 1 )
+polygon = PoolVector2Array( -9.71252, 12.9599, -22.4914, 33.1332, -26.4923, 39.4491, -41.7959, 57.1266, -8.46252, 40.8766 )
+vertex_colors = PoolColorArray( 0.878431, 0.588235, 0.588235, 1, 0.909804, 0.254902, 0.254902, 1, 0.878431, 0.588235, 0.588235, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LeftHand"]
+autoplay = "idle"
+anims/idle = SubResource( 3 )
+
+[node name="RightHand" type="Polygon2D" parent="."]
+position = Vector2( 70.0232, -78.6598 )
+z_index = -2
+color = Color( 0.286275, 0.239216, 0.835294, 1 )
+polygon = PoolVector2Array( -55.1292, 10.4599, -53.4625, 47.5432, -22.2125, 58.3766, -38.0551, 35.3145 )
+vertex_colors = PoolColorArray( 0.878431, 0.588235, 0.588235, 1, 0.878431, 0.588235, 0.588235, 1, 0.945098, 0.247059, 0.247059, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RightHand"]
+autoplay = "idle"
+anims/idle = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.833313, -12.0637 )
+shape = SubResource( 5 )
