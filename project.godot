@@ -34,7 +34,7 @@ _global_script_class_icons={
 
 config/name="Pie De Way"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://Assets/icon.png"
+config/icon="res://Assets/Items/Item_dummy.png"
 
 [autoload]
 
@@ -46,7 +46,6 @@ TimeManager="*res://Scripts/Managers/TimeManager.gd"
 [display]
 
 window/dpi/allow_hidpi=true
-window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [physics]
