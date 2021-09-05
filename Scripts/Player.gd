@@ -5,13 +5,16 @@ export (int) var speed = 200
 var target_position = position
 var last_collider_id
 var viewport_center
+var anchor
 
 func _ready():
 	EventManager.listen(GameEvents.mouse_pressed, funcref(self, "get_input"))
 	viewport_center = Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y/2)
+	anchor = get_node("../Anchor")
 
 func get_input(input_position : Vector2):
-	target_position = position + input_position - viewport_center
+	target_position = anchor.position + input_position - viewport_center
+	print("Anchor pos ", anchor.position, " + ", input_position - viewport_center)
 
 func _physics_process(delta):
 	var new_velocity = calculate_new_velocity(delta)
