@@ -36,6 +36,7 @@ script = ExtResource( 11 )
 current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+smoothing_enabled = true
 
 [node name="NPC_cat" parent="." instance=ExtResource( 2 )]
 position = Vector2( 677.377, 359.956 )
