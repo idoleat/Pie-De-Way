@@ -48,6 +48,7 @@ EventManager="*res://Scripts/Managers/EventManager.gd"
 ItemManager="*res://Scripts/Managers/ItemManager.gd"
 DataManager="*res://Scripts/Managers/DataManager.gd"
 TimeManager="*res://Scripts/Managers/TimeManager.gd"
+EndingSystem="*res://Scripts/EndingSystem.gd"
 
 [display]
 

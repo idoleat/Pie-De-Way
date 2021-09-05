@@ -12,4 +12,8 @@ enum {
 	spend_money,
 	update_item_amount,
 	update_money_amount
+	
+	#ending related
+	game_ended
+	show_ending
 }
