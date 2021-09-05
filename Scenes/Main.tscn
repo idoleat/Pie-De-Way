@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/MainSystem.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/BaseCharacter.tscn" type="PackedScene" id=2]
@@ -73,13 +73,8 @@ vertex_colors = PoolColorArray( 0.945098, 0.611765, 0.0313726, 1, 0.952941, 0.98
 [node name="RightHand" parent="NPC_pika" index="3"]
 vertex_colors = PoolColorArray( 1, 0.6, 0.121569, 1, 0.996078, 0.623529, 0.0862745, 1, 1, 0.988235, 0, 1 )
 
-[node name="GUI" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="GUI" type="CanvasLayer" parent="."]
 script = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Ending" parent="GUI" instance=ExtResource( 14 )]
 
