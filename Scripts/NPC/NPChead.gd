@@ -6,3 +6,4 @@ export (Texture) var head
 export (String) var name
 export (Vector2) var offset
 export (Vector2) var scale
+export (Script) var NPC_behavior

@@ -5,7 +5,7 @@
 
 [node name="Generator" type="Node"]
 script = ExtResource( 2 )
-MaxJitterAmount = 30.0
+MaxJitterAmount = 33.0
 
 [node name="UI" type="Control" parent="."]
 margin_right = 40.0
