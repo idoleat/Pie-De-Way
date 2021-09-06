@@ -102,7 +102,8 @@ position = Vector2( -0.745326, -101.509 )
 scale = Vector2( 0.956522, 1 )
 z_index = -1
 color = Color( 0.168627, 0.27451, 0.219608, 1 )
-polygon = PoolVector2Array( -31.1133, 108.981, -1.05654, 88.9811, 32.4851, 111.064, 13.3185, 36.0644, -12.3823, 39.8144 )
+polygon = PoolVector2Array( -31.1133, 108.981, -1.05654, 88.9811, 32.4851, 111.064, 14.5863, 39.6876, -15.0441, 38.2845 )
+vertex_colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0.733333, 0, 0, 1, 0.701961, 0, 0, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Body"]
 autoplay = "idle"
@@ -112,8 +113,8 @@ anims/idle = SubResource( 2 )
 position = Vector2( -6.0057, -74.2495 )
 z_index = -2
 color = Color( 0.611765, 0.756863, 0.658824, 1 )
-polygon = PoolVector2Array( -9.71252, 12.9599, -22.4914, 33.1332, -26.4923, 39.4491, -41.7959, 57.1266, -8.46252, 40.8766 )
-vertex_colors = PoolColorArray( 0.878431, 0.588235, 0.588235, 1, 0.909804, 0.254902, 0.254902, 1, 0.878431, 0.588235, 0.588235, 1 )
+polygon = PoolVector2Array( -9.71252, 12.9599, -17.8288, 24.2139, -28.4921, 37.4029, -41.7959, 57.1266, -8.46252, 40.8766 )
+vertex_colors = PoolColorArray( 0.219608, 0.0392157, 0, 1, 0.407843, 0.00784314, 0.00784314, 1, 1, 0.027451, 0.027451, 1, 0.556863, 0.0509804, 0.0509804, 1, 0.807843, 0.796078, 0.698039, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LeftHand"]
 autoplay = "idle"
@@ -123,8 +124,8 @@ anims/idle = SubResource( 3 )
 position = Vector2( 70.0232, -78.6598 )
 z_index = -2
 color = Color( 0.286275, 0.239216, 0.835294, 1 )
-polygon = PoolVector2Array( -55.1292, 10.4599, -53.4625, 47.5432, -22.2125, 58.3766, -38.0551, 35.3145 )
-vertex_colors = PoolColorArray( 0.878431, 0.588235, 0.588235, 1, 0.878431, 0.588235, 0.588235, 1, 0.945098, 0.247059, 0.247059, 1 )
+polygon = PoolVector2Array( -58.7807, 10.6649, -53.4625, 47.5432, -22.2125, 58.3766, -38.0551, 35.3145 )
+vertex_colors = PoolColorArray( 1, 0, 0, 1, 0.52549, 0.52549, 0.52549, 1, 0.988235, 0.0235294, 0.0235294, 1, 0.941176, 0.941176, 0.941176, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RightHand"]
 autoplay = "idle"
