@@ -28,4 +28,11 @@ func show_item(item_name : String):
 			if not i in item_id_dict.values():
 				panel_list[i].get_stylebox("panel").set_texture(data.icon)
 				item_id_dict[item_name] = i
+				panel_list[i].get_child(0).text = item_name
 				break
+
+func use_item(item_name: String, amount: int):
+	# Update data
+	if (!ItemManager.spend_item(item_name, amount)):
+		# Update UI
+		panel_list[item_id_dict[item_name]].get_stylebox("panel").set_texture(null)

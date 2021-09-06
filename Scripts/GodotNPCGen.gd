@@ -44,6 +44,7 @@ func generate(amount: int):
 		ch_head.position = heads[rand].offset
 		ch_head.scale = heads[rand].scale
 		ch.name = heads[rand].name
+		ch.script = heads[rand].NPC_behavior
 		ch.position = Vector2(
 			gen_point.x + i * Spacing + randf() * MaxJitterAmount - MaxJitterAmount/2,
 			gen_point.y + randf() * MaxJitterAmount - MaxJitterAmount/2)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://Scripts/UI/ItemButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/UI/InventoryUI.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
@@ -28,7 +29,7 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 95.0
-margin_bottom = 580.0
+margin_bottom = 600.0
 custom_constants/vseparation = 5
 
 [node name="Panel0" type="Panel" parent="ItemList"]
@@ -36,6 +37,15 @@ margin_right = 75.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
+
+[node name="Button" type="Button" parent="ItemList/Panel0"]
+margin_right = 75.0
+margin_bottom = 20.0
+button_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel1" type="Panel" parent="ItemList"]
 margin_top = 80.0
@@ -78,3 +88,5 @@ margin_right = 75.0
 margin_bottom = 555.0
 rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 4 )
+
+[connection signal="button_down" from="ItemList/Panel0/Button" to="ItemList/Panel0/Button" method="_on_Button_button_down"]
