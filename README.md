@@ -1,4 +1,6 @@
 # Pie-De-Way
+Play it here: https://idoleat.itch.io/pie-de-way
+
 This game is developed for [StopWaitingForGodot game jam](https://itch.io/jam/stop-waiting-for-godot). Pie De Way means lining up in Traditional Chinese. It's the direct pronunciation translation from 「排隊」. You play as a dumb ass lining up for......?!
 
 It's a lining up simulator. You can just lining up or try to do something else (interesting) while lining up.  Feel free to tell us how many interesting stuff/Easter eggs you have found! (I thing you may need  explanations of some of them :D)
