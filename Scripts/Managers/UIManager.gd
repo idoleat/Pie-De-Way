@@ -20,7 +20,7 @@ func update_inventory(args):
 	var item_name = args.item_name
 	var amount = args.amount
 
-	inventory.show_item(item_name)
+	inventory.update_item(item_name, amount == 0)
 
 func show_item_get_hint(args):
 	var item_name = args.item_name

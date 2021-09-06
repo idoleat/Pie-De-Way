@@ -30,6 +30,7 @@ script = ExtResource( 13 )
 [node name="Inventory" parent="GUI" instance=ExtResource( 12 )]
 
 [node name="Hint" parent="GUI" instance=ExtResource( 15 )]
+mouse_filter = 2
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 z_index = -3

@@ -1,7 +1,10 @@
 extends Button
 
-onready var Inv = get_node("../../..")
+onready var inventory = get_node("../..")
 
-func _on_Button_button_down():
-	Inv.use_item(self.text, 1)
+func _ready():
+	connect("pressed", self, "_on_button_pressed")
+
+func _on_button_pressed():
+	inventory.use_item(name, 1)
 	print("Use 1 ", self.text)

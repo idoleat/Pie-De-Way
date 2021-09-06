@@ -24,12 +24,12 @@ func get_money(amount : int):
 	money += amount
 	EventManager.send(GameEvents.update_money_amount, {amount = money})
 
-func spend_item(item_name, amount)-> bool:
-	if amount >= items[item_name]:
-		items.erase(item_name)
+func spend_item(item_name, amount) -> bool:
+	if amount > items[item_name]:
 		return false
 	else:
 		items[item_name] -= amount
+		EventManager.send(GameEvents.update_item_amount, {item_name = item_name, amount = items[item_name]})
 		return true
 
 func spend_money(amount : int):
