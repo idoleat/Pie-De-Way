@@ -21,7 +21,7 @@ func update_item(item_name : String, remove : bool):
 		if remove:
 			var id = item_id_dict[item_name]
 			item_id_dict.erase(item_name)
-			
+			button_list[id].name = "item" + String(id)
 			button_list[id].disabled = true
 			button_list[id].set_button_icon(null)
 		return
