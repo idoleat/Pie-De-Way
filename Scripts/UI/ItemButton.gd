@@ -7,4 +7,10 @@ func _ready():
 
 func _on_button_pressed():
 	inventory.use_item(name, 1)
-	print("Use 1 ", self.text)
+	if(name == "X7RE4P"): 
+		print("Food deliver~~~")
+		var who_deliver = randi() % 2
+		if (who_deliver == 1):
+			get_node("/root/Main/UberEats").Deliver()
+		else: 
+			get_node("/root/Main/FoosPanda").Deliver()

@@ -16,7 +16,7 @@ func _ready():
 	else: position = B_position
 	target_position = position
 
-func Deliver(input_position : Vector2):
+func Deliver():
 	target_position = get_node("../Player").position
 
 func _physics_process(delta):
@@ -28,7 +28,7 @@ func _physics_process(delta):
 			if(last_collider_id == collision.collider_id): continue
 			if (collision.collider.has_method("Collided")):
 				collision.collider.Collided()
-				swap_position()
+			if(collision.collider.name == "Player"): swap_position()
 			last_collider_id = collision.collider_id
 	else:
 		last_collider_id = 0
